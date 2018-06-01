@@ -29,6 +29,8 @@ def validate(circles, blockers):
     # Is circle good for each other?
     for circle1 in circles:
         for circle2 in circles:
+            if circle2 is circle1:
+                continue
             x1 = circle1[0]
             y1 = circle1[1]
             r1 = circle1[2]
